@@ -1,0 +1,36 @@
+.user-dropdown {
+  position: absolute;
+  background-color: $darkBlueColor;
+  border: solid 1px $blueColor;
+  padding: 0;
+  color: $whiteColor;
+  width: 265px;
+  top: 55px;
+  right: 24px;
+  border-radius: 5px;
+  box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.25);
+  li {
+    list-style: none;
+    border-bottom: solid 1px $blueColor;
+    padding: $spacing-small;
+    h3 {
+      display: inline-flex;
+      color: $lightBlueColor;
+      width: 35%;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  .user-dropdown {
+    width: 400px;
+    font-size: 20px;
+    top: 70px;
+    li {
+      padding: $spacing-medium;
+      h3 {
+        width: 35%;
+      }
+    }
+  }
+}
