@@ -11,7 +11,7 @@
     max-width: 305px;
     margin: 0 auto $spacing-large;
   }
-  button {
+  a.primary-btn {
     max-width: 305px;
     margin: auto;
   }
@@ -24,7 +24,7 @@
       height: calc(100vh - 400px);
     }
     h1,
-    button {
+    a.primary-btn {
       max-width: 850px;
     }
   }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import welcomeImg from "../assets/images/welcome-image.svg";
 
 export default function Welcome() {
@@ -11,7 +12,9 @@ export default function Welcome() {
         With <span className="lightblue-color">InstaPacket</span>, you can
         easily and safely track your packages anytime.
       </h1>
-      <button className="primary-btn">Get Started</button>
+      <Link to="/listing" className="primary-btn">
+        Get Started
+      </Link>
     </div>
   );
 }
