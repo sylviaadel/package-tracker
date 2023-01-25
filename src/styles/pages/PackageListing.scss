@@ -4,6 +4,7 @@
   background-color: $blueColor;
   min-height: calc(100vh - 60px);
   padding: $spacing-medium;
+  margin-top: 70px;
   h1 {
     color: $whiteColor;
     display: flex;
@@ -95,6 +96,7 @@
 @media (min-width: 860px) {
   #Listing {
     min-height: calc(100vh - 80px);
+    margin-top: 80px;
     padding: $spacing-xlarge $spacing-large;
     h1 {
       justify-content: left;

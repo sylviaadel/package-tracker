@@ -7,7 +7,7 @@ export default function PackageListing() {
     <div id="Listing">
       <h1>
         <FontAwesomeIcon icon={solid("list")} />
-        List of Packages
+        Your Packages
       </h1>
       <PackageItem />
     </div>
