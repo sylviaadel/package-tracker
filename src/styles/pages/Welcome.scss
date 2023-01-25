@@ -1,0 +1,31 @@
+#Welcome {
+  min-height: calc(100vh - 70px);
+  background-color: $blueColor;
+  & > img {
+    height: calc(100vh - 340px);
+    width: 100%;
+  }
+  h1 {
+    color: $whiteColor;
+    text-align: center;
+    max-width: 305px;
+    margin: 0 auto $spacing-large;
+  }
+  button {
+    max-width: 305px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 860px) {
+  #Welcome {
+    min-height: calc(100vh - 80px);
+    img {
+      height: calc(100vh - 400px);
+    }
+    h1,
+    button {
+      max-width: 850px;
+    }
+  }
+}

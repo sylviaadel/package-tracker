@@ -1,0 +1,44 @@
+#Navbar {
+  background-color: $darkBlueColor;
+  height: 70px;
+  padding: 0 $spacing-medium;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    .mainLogo {
+      height: 40px;
+      margin-right: $spacing-xsmall;
+    }
+    label {
+      color: $yellowColor;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+  .fa-circle-user {
+    color: $yellowColor;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 860px) {
+  #Navbar {
+    height: 80px;
+    a {
+      .mainLogo {
+        margin-right: $spacing-small;
+      }
+      label {
+        font-size: 46px;
+        font-weight: bold;
+      }
+    }
+    .fa-circle-user {
+      font-size: 50px;
+    }
+  }
+}

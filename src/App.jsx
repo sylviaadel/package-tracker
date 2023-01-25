@@ -1,12 +1,15 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/shared/Navbar";
+import Welcome from "./pages/Welcome";
 import "./styles/style.scss";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <button className="primary-btn">Get Started</button>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
