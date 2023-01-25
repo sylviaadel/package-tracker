@@ -1,11 +1,15 @@
 #Navbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: $darkBlueColor;
   height: 70px;
   padding: 0 $spacing-medium;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   a {
     text-decoration: none;
     display: flex;

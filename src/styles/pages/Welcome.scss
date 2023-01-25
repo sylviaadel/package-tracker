@@ -1,5 +1,6 @@
 #Welcome {
   min-height: calc(100vh - 70px);
+  margin-top: 70px;
   background-color: $blueColor;
   & > img {
     height: calc(100vh - 340px);
@@ -20,6 +21,7 @@
 @media (min-width: 860px) {
   #Welcome {
     min-height: calc(100vh - 80px);
+    margin-top: 80px;
     img {
       height: calc(100vh - 400px);
     }
