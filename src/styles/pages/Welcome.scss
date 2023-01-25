@@ -1,0 +1,10 @@
+#Welcome {
+  height: calc(100vh - 70px);
+  background-color: $blueColor;
+}
+
+@media (min-width: 860px) {
+  #Welcome {
+    height: calc(100vh - 100px);
+  }
+}
