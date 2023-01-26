@@ -1,0 +1,33 @@
+@import "react-accessible-accordion/dist/fancy-example.css";
+
+#Listing {
+  min-height: calc(100vh - 60px);
+  padding: $spacing-medium;
+  margin-top: 70px;
+  h1 {
+    color: $whiteColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $spacing-medium;
+    svg {
+      font-size: 30px;
+      margin-right: $spacing-xsmall;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  #Listing {
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
+    padding: $spacing-xlarge $spacing-large;
+    h1 {
+      justify-content: left;
+      margin-bottom: $spacing-xlarge;
+      svg {
+        font-size: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+#Listing {
+  .accordion {
+    border: 0;
+    .accordion__item {
+      margin-bottom: $spacing-small;
+      background-color: $darkBlueColor;
+      border-radius: 20px;
+      padding: 0 $spacing-medium;
+      .accordion__heading {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        h2 {
+          display: flex;
+          align-items: center;
+          & > svg {
+            margin-right: $spacing-xsmall;
+          }
+          span {
+            font-size: 16px;
+            top: $spacing-xsmall;
+            margin-left: $spacing-xsmall;
+          }
+          .needs-verification {
+            background-color: $yellowColor;
+            color: $darkBlueColor;
+            font-weight: bold;
+            width: 190px;
+            height: 30px;
+            gap: $spacing-xsmall;
+            border-radius: 500px;
+            font-size: 16px;
+            position: absolute;
+            margin-top: 88px;
+            margin-left: $spacing-small;
+            padding: 5px;
+            text-align: center;
+            display: none;
+            svg {
+              margin-right: $spacing-xsmall;
+            }
+          }
+        }
+        .accordion__button {
+          background-color: transparent;
+          color: #444;
+          cursor: pointer;
+          padding: 0;
+          width: 100%;
+          text-align: left;
+          border: none;
+          color: $lightBlueColor;
+          position: relative;
+          &:before {
+            position: absolute;
+            right: 0;
+            top: 8px;
+            border-left: 2px solid currentColor;
+            border-right: 0;
+          }
+          &[aria-expanded="true"] {
+            &::before {
+              transform: rotate(135deg);
+              top: $spacing-small;
+            }
+            h2 {
+              .needs-verification {
+                display: inline-block;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+      .accordion__panel {
+        color: $whiteColor;
+        padding: $spacing-large $spacing-xsmall $spacing-xlarge;
+        .info-content {
+          margin-bottom: $spacing-medium;
+          h3 {
+            margin-bottom: $spacing-xsmall;
+            svg {
+              margin-right: $spacing-xsmall;
+            }
+          }
+          label {
+            text-transform: capitalize;
+            &.greenColor {
+              color: #7bec46;
+            }
+          }
+        }
+        .track-link {
+          color: $lightBlueColor;
+          text-decoration: none;
+          float: right;
+          svg {
+            margin-left: $spacing-xsmall;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #Listing {
+    .accordion {
+      .accordion__item {
+        .accordion__heading {
+          .accordion__button {
+            h2 {
+              font-size: 18px;
+              span {
+                top: 2px;
+              }
+            }
+            &:before {
+              top: 4px;
+            }
+            &[aria-expanded="true"]::before {
+              top: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  #Listing {
+    .accordion {
+      .accordion__item {
+        padding: 0 $spacing-large;
+        .accordion__heading {
+          height: 120px;
+          .accordion__button {
+            &:before {
+              height: 20px;
+              width: 20px;
+              border-left: 4px solid currentColor;
+              border-bottom: 4px solid currentColor;
+              top: $spacing-small;
+            }
+            &[aria-expanded="true"] {
+              h2 {
+                .needs-verification {
+                  left: auto;
+                  transform: inherit;
+                  margin-left: $spacing-small;
+                }
+              }
+              &::before {
+                top: $spacing-medium;
+              }
+            }
+            h2 {
+              & > svg {
+                margin-right: $spacing-small;
+              }
+              span {
+                font-size: 20px;
+                margin-left: $spacing-small;
+              }
+              .needs-verification {
+                position: relative;
+                display: inline-block;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+        .accordion__panel {
+          padding-top: 0;
+          .info-content {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            h3 {
+              width: 445px;
+            }
+            label {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

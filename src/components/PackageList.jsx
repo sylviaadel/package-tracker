@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
-export default function PackageListing() {
+export default function Listing() {
   const [user, setUser] = useState([]);
 
   const fetchData = () => {
@@ -29,16 +29,16 @@ export default function PackageListing() {
           <h2>
             <FontAwesomeIcon icon={solid("box-archive")} />
             {userObj.sender} <span>({userObj.parcel_id})</span>
+            {userObj.verification_required === true && (
+              <div className="needs-verification">
+                <FontAwesomeIcon icon={solid("circle-exclamation")} />
+                Needs Verification
+              </div>
+            )}
           </h2>
         </AccordionItemButton>
       </AccordionItemHeading>
-      <AccordionItemPanel>
-        <p>
-          Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat
-          ut occaecat consequat est minim minim esse tempor laborum consequat
-          esse adipisicing eu reprehenderit enim.
-        </p>
-      </AccordionItemPanel>
+      <AccordionItemPanel></AccordionItemPanel>
     </AccordionItem>
   ));
 
