@@ -6,8 +6,8 @@ export default function Welcome() {
   return (
     <div id="Welcome">
       <picture>
-        <source media="(min-width:860px)" srcset={welcomeImgDesktop} />
-        <source media="(min-width:320px)" srcset={welcomeImg} />
+        <source media="(min-width:860px)" srcSet={welcomeImgDesktop} />
+        <source media="(min-width:320px)" srcSet={welcomeImg} />
         <img
           src={welcomeImg}
           alt="People putting closed packages beside a big truck."
