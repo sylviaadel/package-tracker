@@ -2,9 +2,15 @@
   min-height: calc(100vh - 70px);
   margin-top: 70px;
   background-color: $blueColor;
-  & > img {
-    height: calc(100vh - 340px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-medium;
+  & > picture img {
+    max-height: calc(100vh - 360px);
     width: 100%;
+    object-fit: contain;
   }
   h1 {
     color: $whiteColor;
@@ -14,7 +20,6 @@
   }
   a.primary-btn {
     max-width: 305px;
-    margin: auto;
   }
 }
 
@@ -22,8 +27,12 @@
   #Welcome {
     min-height: calc(100vh - 80px);
     margin-top: 80px;
-    img {
-      height: calc(100vh - 400px);
+    picture img {
+      max-height: calc(100vh - 355px);
+      margin-bottom: $spacing-large;
+    }
+    h1 {
+      font-size: 32px;
     }
     h1,
     a.primary-btn {
