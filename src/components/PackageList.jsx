@@ -58,13 +58,6 @@ export default function Listing() {
         </div>
         <div className="info-content">
           <h3>
-            <FontAwesomeIcon icon={solid("location-dot")} />
-            Pickup Location:
-          </h3>
-          <label>{item.location_name}</label>
-        </div>
-        <div className="info-content">
-          <h3>
             <FontAwesomeIcon icon={solid("calendar")} />
             Last Updated:
           </h3>
