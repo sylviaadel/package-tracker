@@ -29,10 +29,12 @@ export default function Listing() {
           <h2>
             <FontAwesomeIcon icon={solid("box-archive")} />
             {userObj.sender} <span>({userObj.parcel_id})</span>
-            <div className="needs-verification">
-              <FontAwesomeIcon icon={solid("circle-exclamation")} />
-              Needs Verification
-            </div>
+            {userObj.verification_required === true && (
+              <div className="needs-verification">
+                <FontAwesomeIcon icon={solid("circle-exclamation")} />
+                Needs Verification
+              </div>
+            )}
           </h2>
         </AccordionItemButton>
       </AccordionItemHeading>
