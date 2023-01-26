@@ -1,0 +1,46 @@
+#Location {
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+  color: $whiteColor;
+  text-align: center;
+  padding: $spacing-medium;
+  h1 {
+    svg {
+      margin-right: $spacing-xsmall;
+      font-size: 30px;
+    }
+  }
+  .info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: $spacing-small;
+    h3 {
+      color: $lightBlueColor;
+      margin-right: $spacing-small;
+      svg {
+        margin-right: $spacing-xsmall;
+      }
+    }
+  }
+  .primary-btn {
+    max-width: 305px;
+    margin: $spacing-medium auto;
+    svg {
+      margin-right: $spacing-xsmall;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  #Location {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    h1 {
+      svg {
+        font-size: 45px;
+        margin-right: $spacing-small;
+      }
+    }
+  }
+}
