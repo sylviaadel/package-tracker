@@ -10,6 +10,7 @@
     max-height: calc(100vh - 370px);
     width: 100%;
     object-fit: contain;
+    max-width: 500px;
   }
   h1 {
     color: $whiteColor;
@@ -22,7 +23,7 @@
   }
 }
 
-@media (min-width: 860px) {
+@media (min-width: 1200px) {
   #Welcome {
     min-height: calc(100vh - 80px);
     margin-top: 80px;

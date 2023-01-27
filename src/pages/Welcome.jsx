@@ -6,7 +6,7 @@ export default function Welcome() {
   return (
     <div id="Welcome">
       <picture>
-        <source media="(min-width:860px)" srcSet={welcomeImgDesktop} />
+        <source media="(min-width:1200px)" srcSet={welcomeImgDesktop} />
         <source media="(min-width:320px)" srcSet={welcomeImg} />
         <img
           src={welcomeImg}
