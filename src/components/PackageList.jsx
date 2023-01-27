@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -7,23 +6,20 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import { Link } from "react-router-dom";
+import useFetch from "../services/useFetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import Spinner from "./shared/Spinner";
 
-export default function Listing() {
-  const [packageList, setPackageList] = useState([]);
+export default function PackageList() {
+  const { data, loading, error } = useFetch(
+    "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840"
+  );
 
-  const fetchData = () => {
-    return fetch("https://my.api.mockaroo.com/insta-orders.json?key=e49e6840")
-      .then((response) => response.json())
-      .then((data) => setPackageList(data));
-  };
+  if (error) throw error;
+  if (loading || !data) return <Spinner />;
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const packages = packageList.map((item) => (
+  const packages = data.map((item) => (
     <AccordionItem key={item.id}>
       <AccordionItemHeading>
         <AccordionItemButton>
@@ -55,13 +51,6 @@ export default function Listing() {
             Estimated Time of Delivery:
           </h3>
           <label>{item.eta}</label>
-        </div>
-        <div className="info-content">
-          <h3>
-            <FontAwesomeIcon icon={solid("location-dot")} />
-            Pickup Location:
-          </h3>
-          <label>{item.location_name}</label>
         </div>
         <div className="info-content">
           <h3>
