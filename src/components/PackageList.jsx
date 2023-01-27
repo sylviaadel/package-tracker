@@ -10,13 +10,14 @@ import useFetch from "../services/useFetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Spinner from "./shared/Spinner";
+import moment from "moment";
 
 export default function PackageList() {
   const { data, loading, error } = useFetch(
     "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840"
   );
 
-  if (error) throw error;
+  if (error) return console.log("error");
   if (loading || !data) return <Spinner />;
 
   const packages = data.map((item) => (
@@ -50,14 +51,14 @@ export default function PackageList() {
             <FontAwesomeIcon icon={solid("calendar")} />
             Estimated Time of Delivery:
           </h3>
-          <label>{item.eta}</label>
+          <label>{moment(item.eta).format("llll")}</label>
         </div>
         <div className="info-content">
           <h3>
             <FontAwesomeIcon icon={solid("calendar")} />
             Last Updated:
           </h3>
-          <label>{item.last_updated}</label>
+          <label>{moment(item.last_updated).format("llll")}</label>
         </div>
         {item.notes !== null && (
           <div className="info-content">
