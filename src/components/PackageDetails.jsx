@@ -14,7 +14,7 @@ export default function PackageDetails(props) {
       <div className="info-content">
         <h3>
           <FontAwesomeIcon icon={solid("signal")} />
-          Status:
+          Status
         </h3>
         <label
           className={
@@ -27,14 +27,14 @@ export default function PackageDetails(props) {
       <div className="info-content">
         <h3>
           <FontAwesomeIcon icon={solid("calendar")} />
-          Estimated Time of Delivery:
+          Estimated Time of Delivery
         </h3>
         <label>{moment(props.currentProduct.eta).format("llll")}</label>
       </div>
       <div className="info-content">
         <h3>
           <FontAwesomeIcon icon={solid("calendar")} />
-          Last Updated:
+          Last Updated
         </h3>
         <label>
           {moment(props.currentProduct.last_updated).format("llll")}
@@ -44,7 +44,7 @@ export default function PackageDetails(props) {
         <div className="info-content">
           <h3>
             <FontAwesomeIcon icon={solid("message")} />
-            Notes:
+            Notes
           </h3>
           <label>{props.currentProduct.notes}.</label>
         </div>
