@@ -5,6 +5,8 @@
     height: calc(100vh - 295px);
     margin-top: $spacing-small;
     border-radius: 10px;
+    max-width: 950px;
+    margin: $spacing-small auto 0;
     .leaflet-control-attribution.leaflet-control {
       display: none;
     }
