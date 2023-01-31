@@ -27,7 +27,7 @@ export default function PackageDetails(props) {
       <div className="info-content">
         <h3>
           <FontAwesomeIcon icon={solid("calendar")} />
-          Estimated Time of Delivery
+          Estimated Delivery Time
         </h3>
         <label>{moment(props.currentProduct.eta).format("llll")}</label>
       </div>
