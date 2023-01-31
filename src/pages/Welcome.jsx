@@ -17,7 +17,7 @@ export default function Welcome() {
         With <span className="lightblue-color">InstaPacket</span>, you can
         easily and safely track your packages anytime.
       </h1>
-      <Link to="/listing" className="primary-btn">
+      <Link to="/packages" className="primary-btn">
         Get Started
       </Link>
     </div>

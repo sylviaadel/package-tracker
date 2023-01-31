@@ -49,7 +49,7 @@ export default function PackageDetails(props) {
           <label>{props.currentProduct.notes}.</label>
         </div>
       )}
-      <Link to={`/listing/${props.currentProduct.id}`} className="track-link">
+      <Link to={`/packages/${props.currentProduct.id}`} className="track-link">
         Track Package
         <FontAwesomeIcon icon={solid("chevron-right")} />
       </Link>

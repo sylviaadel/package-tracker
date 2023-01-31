@@ -1,4 +1,4 @@
-#Listing {
+#Packages {
   .accordion {
     border: 0;
     .accordion__item {
@@ -106,7 +106,7 @@
 }
 
 @media (max-width: 400px) {
-  #Listing {
+  #Packages {
     .accordion {
       .accordion__item {
         .accordion__heading {
@@ -131,7 +131,7 @@
 }
 
 @media (min-width: 1200px) {
-  #Listing {
+  #Packages {
     .accordion {
       .accordion__item {
         padding: 0 $spacing-large;
