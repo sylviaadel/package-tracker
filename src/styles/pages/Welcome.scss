@@ -7,13 +7,8 @@
   justify-content: center;
   padding: $spacing-medium;
   background: linear-gradient(rgba(26, 42, 82, 0.6), rgba(26, 42, 82, 0.6)),
-    url("../../assets/images/main-bg.jpg") center;
-  & > picture img {
-    max-height: calc(100vh - 370px);
-    width: 100%;
-    object-fit: contain;
-    max-width: 500px;
-  }
+    url("../../assets/images/main-bg.jpg") center no-repeat;
+  background-size: cover;
   h1 {
     color: $lightBlueColor;
     text-align: center;
@@ -44,8 +39,9 @@
       margin-bottom: $spacing-large;
       max-width: 950px;
     }
-    h1 {
-      font-size: 32px;
+    span {
+      font-size: 30px;
+      max-width: 530px;
     }
     h1,
     a.primary-btn {
