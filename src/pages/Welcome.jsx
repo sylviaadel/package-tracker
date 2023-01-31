@@ -5,18 +5,10 @@ import welcomeImgDesktop from "../assets/images/welcome-img-desktop.png";
 export default function Welcome() {
   return (
     <div id="Welcome">
-      {/* <picture>
-        <source media="(min-width:1200px)" srcSet={welcomeImgDesktop} />
-        <source media="(min-width:320px)" srcSet={welcomeImg} />
-        <img
-          src={welcomeImg}
-          alt="People putting closed packages beside a big truck."
-        />
-      </picture> */}
-      <h1>Welcome, Carl Johan De Geer</h1>
+      <h1>Welcome Carl</h1>
       <span>
-        With <span className="lightblue-color">InstaPacket</span>, you can
-        easily and safely track your packages anytime.
+        With InstaPacket, you can easily and safely track your packages anytime
+        and from anywhere
       </span>
       <Link to="/packages" className="primary-btn">
         Get Started
