@@ -16,7 +16,7 @@ export default function Location() {
         </h3>
         <label>Onsgard</label>
       </div>
-      <Link to={`/listing`} className="primary-btn">
+      <Link to={`/packages`} className="primary-btn">
         <FontAwesomeIcon icon={solid("chevron-left")} />
         Back to Packages
       </Link>
