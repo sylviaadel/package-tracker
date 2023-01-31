@@ -4,6 +4,7 @@
   .leaflet-container {
     height: calc(100vh - 295px);
     margin-top: $spacing-small;
+    border-radius: 10px;
     .leaflet-control-attribution.leaflet-control {
       display: none;
     }
