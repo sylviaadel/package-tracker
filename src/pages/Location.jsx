@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import Map from "../components/Map";
 
 export default function Location() {
   return (
@@ -14,8 +15,9 @@ export default function Location() {
           <FontAwesomeIcon icon={solid("location-dot")} />
           Pickup Location:
         </h3>
-        <label>Onsgard</label>
+        <label>Fuller</label>
       </div>
+      <Map />
       <Link to={`/packages`} className="primary-btn">
         <FontAwesomeIcon icon={solid("chevron-left")} />
         Back to Packages
