@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   padding: $spacing-medium;
+  background: linear-gradient(rgba(26, 42, 82, 0.6), rgba(26, 42, 82, 0.6)),
+    url("../../assets/images/main-bg.jpg") center;
   & > picture img {
     max-height: calc(100vh - 370px);
     width: 100%;
@@ -13,13 +15,23 @@
     max-width: 500px;
   }
   h1 {
-    color: $whiteColor;
+    color: $lightBlueColor;
     text-align: center;
     max-width: 305px;
     margin: 0 auto $spacing-large;
   }
+  span {
+    font-size: 20px;
+    color: $whiteColor;
+    font-weight: bold;
+    max-width: 305px;
+    margin-bottom: $spacing-xlarge;
+    text-align: center;
+  }
   a.primary-btn {
     max-width: 305px;
+    position: absolute;
+    bottom: $spacing-large;
   }
 }
 
