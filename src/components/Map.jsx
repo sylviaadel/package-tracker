@@ -1,8 +1,11 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { LocationIcon } from "../helpers/LocationIcon";
 
-export default function Map() {
-  const position = [51.7181762, 17.7257496];
+export default function Map(props) {
+  const position = [
+    props.currentPackage.location_coordinate_latitude,
+    props.currentPackage.location_coordinate_longitude,
+  ];
 
   return (
     <div id="Map">
@@ -12,7 +15,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={position} icon={LocationIcon}>
-          <Popup>Fuller</Popup>
+          <Popup>{props.currentPackage.location_name}</Popup>
         </Marker>
       </MapContainer>
     </div>
