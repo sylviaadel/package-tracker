@@ -3,12 +3,9 @@ import { AccordionItemPanel } from "react-accessible-accordion";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { customizeText } from "../helpers/PackageDetails";
 
 export default function PackageDetails(props) {
-  function customizeText(text) {
-    text = text.replaceAll("-", " ");
-    return text;
-  }
   return (
     <AccordionItemPanel>
       <div className="info-content">
@@ -27,7 +24,7 @@ export default function PackageDetails(props) {
       <div className="info-content">
         <h3>
           <FontAwesomeIcon icon={solid("calendar")} />
-          Estimated Time of Delivery
+          Estimated Delivery Time
         </h3>
         <label>{moment(props.currentProduct.eta).format("llll")}</label>
       </div>
