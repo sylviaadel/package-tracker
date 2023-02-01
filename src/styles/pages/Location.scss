@@ -44,6 +44,11 @@
         margin-right: $spacing-small;
       }
     }
+    .info-content {
+      label {
+        font-size: 20px;
+      }
+    }
     .primary-btn {
       max-width: 950px;
       margin: $spacing-large auto 0;

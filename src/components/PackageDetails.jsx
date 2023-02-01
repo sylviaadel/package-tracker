@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { AccordionItemPanel } from "react-accessible-accordion";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
@@ -7,7 +6,7 @@ import { customizeText } from "../helpers/PackageDetails";
 
 export default function PackageDetails(props) {
   return (
-    <AccordionItemPanel>
+    <>
       <div className="info-content">
         <h3>
           <FontAwesomeIcon icon={solid("signal")} />
@@ -50,6 +49,6 @@ export default function PackageDetails(props) {
         Track Package
         <FontAwesomeIcon icon={solid("chevron-right")} />
       </Link>
-    </AccordionItemPanel>
+    </>
   );
 }

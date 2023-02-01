@@ -5,15 +5,15 @@ import {
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
+  AccordionItemPanel,
 } from "react-accessible-accordion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import PackageDetails from "./PackageDetails";
 
 export default function PackageList() {
-  const { data, loading, error } = useFetch(
-    "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840"
-  );
+  const BASE_URL = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
+  const { data, loading, error } = useFetch(BASE_URL);
   if (error) throw error;
   if (loading || !data) return <Spinner />;
 
@@ -33,7 +33,9 @@ export default function PackageList() {
           </h2>
         </AccordionItemButton>
       </AccordionItemHeading>
-      <PackageDetails currentProduct={item} />
+      <AccordionItemPanel>
+        <PackageDetails currentProduct={item} />
+      </AccordionItemPanel>
     </AccordionItem>
   ));
 
