@@ -5,6 +5,9 @@ import Map from "../components/Map";
 import useFetch from "../services/useFetch";
 
 export default function Location() {
+  const BASE_URL = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
+  const { data: packages, loading, error } = useFetch(BASE_URL);
+  console.log(packages);
   return (
     <div id="Location">
       <h1>

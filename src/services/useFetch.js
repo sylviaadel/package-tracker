@@ -12,7 +12,7 @@ export default function useFetch(url) {
         setLoading(true);
         const response = await axios.get(url);
         setData(response.data);
-        localStorage.setItem("MyPackages", JSON.stringify(data));
+        localStorage.setItem("MyPackages", JSON.stringify(response.data));
       } catch (err) {
         var localStorageItems = localStorage.getItem("MyPackages");
         if (localStorageItems != null) {
