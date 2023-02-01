@@ -3,12 +3,9 @@ import { AccordionItemPanel } from "react-accessible-accordion";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { customizeText } from "../helpers/PackageDetails";
 
 export default function PackageDetails(props) {
-  function customizeText(text) {
-    text = text.replaceAll("-", " ");
-    return text;
-  }
   return (
     <AccordionItemPanel>
       <div className="info-content">
