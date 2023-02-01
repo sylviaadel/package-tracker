@@ -10,6 +10,18 @@
     .leaflet-control-attribution.leaflet-control {
       display: none;
     }
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
+      background: $lightBlueColor;
+      color: $darkBlueColor;
+      font-weight: bold;
+    }
+    .leaflet-popup-close-button {
+      span {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
   }
 }
 
