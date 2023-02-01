@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import welcomeImg from "../assets/images/welcome-image.svg";
-import welcomeImgDesktop from "../assets/images/welcome-img-desktop.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function Welcome() {
   return (
@@ -12,6 +12,7 @@ export default function Welcome() {
       </span>
       <Link to="/packages" className="primary-btn">
         Get Started
+        <FontAwesomeIcon icon={solid("chevron-right")} />
       </Link>
     </div>
   );
