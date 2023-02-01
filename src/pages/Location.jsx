@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Map from "../components/Map";
 
-export default function Location(props) {
-  //const [data, setData] = useState(null);
-
+export default function Location() {
   let { id } = useParams();
   var localStorageItems = JSON.parse(localStorage.getItem("MyPackages"));
   let currentPackage = localStorageItems.find((p) => p.id == id);
