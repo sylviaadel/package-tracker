@@ -6,7 +6,7 @@ export default function NotFound() {
     <div className="error">
       <h1>
         <FontAwesomeIcon icon={solid("triangle-exclamation")} />
-        Invalid Package ID
+        <span>Invalid Package ID</span>
       </h1>
     </div>
   );

@@ -9,7 +9,7 @@ export default function NotFound() {
     <div className="error">
       <h1>
         <FontAwesomeIcon icon={solid("triangle-exclamation")} />
-        Resourse not found at {location.pathname}
+        <span>Resourse not found at {location.pathname}</span>
       </h1>
     </div>
   );
