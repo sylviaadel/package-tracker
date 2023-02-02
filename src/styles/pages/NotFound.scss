@@ -1,4 +1,4 @@
-.error-page {
+.error {
   position: relative;
   height: calc(100vh);
   h1 {
@@ -6,16 +6,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 305px;
+    min-width: 305px;
+    width: 70%;
     text-align: center;
     color: $yellowColor;
+    background: #1a2a52;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    svg {
+      margin-right: $spacing-small;
+    }
   }
 }
 
 @media (min-width: 860px) {
-  .error-page {
+  .error {
     h1 {
-      width: 825px;
+      width: 850px;
     }
   }
 }
