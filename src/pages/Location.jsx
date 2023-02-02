@@ -2,14 +2,14 @@ import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Map from "../components/Map";
-import InvaidLocation from "../components/InvalidLocation";
+import InvalidLocation from "../components/InvalidLocation";
 
 export default function Location() {
   let { id } = useParams();
   var localStorageItems = JSON.parse(localStorage.getItem("MyPackages"));
   let currentPackage = localStorageItems.find((p) => p.id == id);
   if (currentPackage == null) {
-    return <InvaidLocation />;
+    return <InvalidLocation />;
   }
   return (
     <div id="Location">
