@@ -7,7 +7,7 @@
       border-radius: 20px;
       padding: 0 $spacing-medium;
       .accordion__heading {
-        height: 80px;
+        height: 70px;
         display: flex;
         align-items: center;
         h2 {
@@ -25,11 +25,11 @@
             background-color: $yellowColor;
             color: $darkBlueColor;
             font-weight: bold;
-            width: 190px;
-            height: 30px;
+            width: 160px;
+            height: 25px;
             gap: $spacing-xsmall;
             border-radius: 500px;
-            font-size: 16px;
+            font-size: 13px;
             position: absolute;
             margin-top: 88px;
             margin-left: $spacing-small;
