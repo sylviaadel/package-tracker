@@ -6,8 +6,8 @@ import InvalidLocation from "../components/InvalidLocation";
 
 export default function Location() {
   let { id } = useParams();
-  var localStorageItems = JSON.parse(localStorage.getItem("MyPackages"));
-  let currentPackage = localStorageItems.find((p) => p.id == id);
+  var storedPackages = JSON.parse(localStorage.getItem("MyPackages"));
+  let currentPackage = storedPackages.find((p) => p.id == id);
   if (currentPackage == null) {
     return <InvalidLocation />;
   }

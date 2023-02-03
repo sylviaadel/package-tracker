@@ -14,9 +14,9 @@ export default function useFetch(url) {
         setData(response.data);
         localStorage.setItem("MyPackages", JSON.stringify(response.data));
       } catch (err) {
-        var localStorageItems = localStorage.getItem("MyPackages");
-        if (localStorageItems != null) {
-          setData(JSON.parse(localStorageItems));
+        var storedPackages = localStorage.getItem("MyPackages");
+        if (storedPackages != null) {
+          setData(JSON.parse(storedPackages));
         } else {
           setError(err);
         }
