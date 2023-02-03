@@ -16,6 +16,7 @@ export default function Location() {
       <h1>
         <FontAwesomeIcon icon={solid("box-archive")} />
         {currentPackage.sender}
+        <span className="package-code">Code: {currentPackage.parcel_id}</span>
       </h1>
       <div className="info-content">
         <h3>

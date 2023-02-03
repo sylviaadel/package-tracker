@@ -1,4 +1,4 @@
-#Navbar {
+#Header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -33,7 +33,7 @@
 }
 
 @media (min-width: 1200px) {
-  #Navbar {
+  #Header {
     height: 80px;
     a {
       .mainLogo {

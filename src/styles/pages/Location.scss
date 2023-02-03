@@ -9,6 +9,11 @@
       margin-right: $spacing-xsmall;
       font-size: 30px;
     }
+    .package-code {
+      font-size: 14px;
+      margin-left: $spacing-xsmall;
+      color: $yellowColor;
+    }
   }
   .info-content {
     display: flex;
@@ -42,6 +47,10 @@
       svg {
         font-size: 45px;
         margin-right: $spacing-small;
+      }
+      .package-code {
+        font-size: 16px;
+        margin-left: $spacing-xsmall;
       }
     }
     .info-content {

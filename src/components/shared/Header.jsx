@@ -9,7 +9,7 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav id="Navbar">
+    <header id="Header">
       <Link to="/">
         <img
           src={mainLogo}
@@ -23,6 +23,6 @@ export default function Navbar() {
         icon={solid("circle-user")}
       />
       {toggle && <UserInfoDropDown />}
-    </nav>
+    </header>
   );
 }
