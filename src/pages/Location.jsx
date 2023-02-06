@@ -8,9 +8,12 @@ export default function Location() {
   let { id } = useParams();
   var storedPackages = JSON.parse(localStorage.getItem("MyPackages"));
   let currentPackage = storedPackages.find((p) => p.id == id);
+
+  // great!
   if (currentPackage == null) {
     return <InvalidLocation />;
   }
+
   return (
     <div id="Location">
       <h1>

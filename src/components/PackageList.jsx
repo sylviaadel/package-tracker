@@ -17,6 +17,8 @@ export default function PackageList() {
   if (error) throw error;
   if (loading || !data) return <Spinner />;
 
+  // nesting -1
+  // this is too complex
   const packages = data.map((item) => (
     <AccordionItem key={item.id}>
       <AccordionItemHeading>

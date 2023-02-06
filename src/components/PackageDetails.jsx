@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { customizeText } from "../helpers/PackageDetails";
 
+// You where doing so go until this part...
 export default function PackageDetails(props) {
   return (
     <>

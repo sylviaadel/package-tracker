@@ -6,6 +6,7 @@ import Location from "./pages/Location";
 import NotFound from "./pages/NotFound";
 import "./styles/style.scss";
 
+// good
 export default function App() {
   return (
     <div className="App">

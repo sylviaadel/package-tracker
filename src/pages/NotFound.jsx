@@ -9,6 +9,7 @@ export default function NotFound() {
     <div className="error">
       <h1>
         <FontAwesomeIcon icon={solid("triangle-exclamation")} />
+        {/* This span is unnnecesary, notice you dont need it on Packages.jsx */}
         <span>Resourse not found at {location.pathname}</span>
       </h1>
     </div>
